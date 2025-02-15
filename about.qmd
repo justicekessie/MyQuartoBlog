@@ -1,0 +1,18 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://x.com/jakes_officio
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/justice-a-kessie/
+    - icon: github
+      text: Github
+      href: https://github.com/justicekessie
+---
+
+About this blog
