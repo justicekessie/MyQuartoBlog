@@ -19,7 +19,7 @@ The dataset begins in early 2020, during the first wave of the pandemic, and con
 
 By analyzing this dataset, we can track how each variant's dominance shifted over time and across regions. It provides insight into when and where each strain became the most prevalent, shedding light on regional variations in how COVID-19 spread. Additionally, the dataset allows us to explore how mortality rates changed with each variant. By comparing death counts for each strain, we can gain a better understanding of how the severity of the virus evolved. Overall, the dataset is a powerful tool for both public health policy makers and epidemiological researchers. It allows us to visualize how the virus spread geographically and how different variants impacted different regions at various times. For example, using pie charts, we can easily show the proportion of each strain in different states, offering a clear picture of how the pandemic unfolded across the U.S. over time.
 
-```{r}
+```{r, include=FALSE}
 # Required packages
 library(tidyverse)
 library(lubridate)
@@ -161,7 +161,7 @@ summary_stats <- covid_ts %>%
 print(summary_stats)
 ```
 
-```{r}
+```{r, include=FALSE}
 # Create visualization of dominant strains
 # Modify the dominant strains data to ensure unique state-month-year combinations
 dominant_strains <- covid_ts %>%
@@ -205,7 +205,7 @@ map_data <- us_map %>%
   )
 ```
 
-```{r, include=FALSE}
+```{r}
 # Create the visualization with updated aesthetics
 p <- ggplot(map_data, aes(x = long, y = lat, group = piece_id)) +
   geom_polygon(
@@ -231,58 +231,9 @@ p <- ggplot(map_data, aes(x = long, y = lat, group = piece_id)) +
   ease_aes('linear')
 ```
 
-```{r, include=FALSE}
+```{r}
 p
 ```
 
-```{r}
-# Load US state map data
-us_states <- map_data("state") %>%
-  rename(state = region)  # Rename region to match COVID data
-
-# Ensure COVID dataset has lowercase states and proper date format
-covid_ts <- covid_ts %>%
-  mutate(state = tolower(state), date = as.Date(date))
-
-# Convert to long format for strains
-covid_long <- covid_ts %>%
-  pivot_longer(cols = c(Original, Alpha, Delta, Omicron), names_to = "strain", values_to = "cases") %>%
-  mutate(prevalence = cases / total_infections) %>%
-  filter(!is.na(date) & !is.na(prevalence))
-
-# Ensure each state-strain-date combination is unique
-covid_expanded <- covid_long %>%
-  group_by(state, strain, date) %>%
-  summarise(prevalence = mean(prevalence, na.rm = TRUE), .groups = "drop")
-
-# Merge map data with COVID data (all dates)
-covid_map <- left_join(us_states, covid_expanded, by = "state", relationship = "many-to-many")
-
-# Plot function with corrected subtitle
-p <- ggplot(covid_map, aes(x = long, y = lat, group = group, fill = prevalence)) + 
-  geom_polygon(color = "white", linewidth = 0.2) + 
-  coord_map("albers", lat0 = 39, lat1 = 45) + 
-  scale_fill_viridis_c(option = "plasma", name = "Strain Prevalence", na.value = "gray90") +  
-  labs(
-    title = "COVID-19 Strain Distribution in the U.S.",
-    subtitle = "Date: {frame_time}",
-    fill = "Prevalence"
-  ) + 
-  facet_wrap(~strain) +  # Separate maps for each strain
-  theme_minimal() + 
-  theme(
-    legend.position = "bottom",
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
-    panel.grid = element_blank()
-  ) + 
-  transition_time(date) + 
-  ease_aes('linear')
-
-# Animate and save
-anim_save(
-  "covid_strain_density.gif",
-  animate(p, nframes = 200, fps = 10, width = 800, height = 500, end_pause = 30)
-)
-
+```{}
 ```
