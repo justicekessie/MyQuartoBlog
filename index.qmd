@@ -260,16 +260,14 @@ ggsave("covid_strains_by_state.pdf", combined_plot,
        limitsize = FALSE)
 ```
 
+::: column-screen
 ```{r}
 #| echo: false
-
-# Save the plot
-ggsave("covid_strains_by_state.pdf", combined_plot, 
-       width = 12, height = 8, limitsize = FALSE)
-```
-
-```{r}
-#| echo: false
-#| out.width: "200%"
+#| fig.width: 15
+#| fig.height: 12
+#| out.width: "100%"
+#| out.height: "1500px"
+#| fig.align: "center"
 knitr::include_graphics("covid_strains_by_state.pdf")
 ```
+:::

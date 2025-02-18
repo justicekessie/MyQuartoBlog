@@ -2,14 +2,14 @@ project:
   type: website
 
 website:
-  title: "MyQuartoBlog"
+  title: "JAKes' Blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/justicekessie
       - icon: twitter
-        href: https://twitter.com
+        href: https://x.com/jakes_officio
 format:
   html:
     theme: cosmo

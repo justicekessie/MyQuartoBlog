@@ -206,13 +206,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
+    <div class="quarto-title column-body">
       <h1 class="title">JAKes’ Blog</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-body">
 
       
     
@@ -227,13 +227,13 @@ window.Quarto = {
         
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full column-body" id="quarto-document-content">
 
 
 
 
 
-<section id="description-of-data" class="level2">
+<section id="description-of-data" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="description-of-data">Description of Data</h2>
 <p>The covid_ts dataset tracks the daily counts of COVID-19 infections and deaths across U.S. states, broken down by different virus strains. It includes several key columns: the date, state, total infections, deaths, and daily case counts for each COVID-19 strain— <em>Original</em>, <em>Alpha</em>, <em>Delta</em>, and <em>Omicron</em>. The date column records the day of the entry, while the state column tells you which U.S. state the data pertains to. The total_infections column gives the overall count of COVID-19 cases, and deaths shows the number of lives lost to the virus. The strain-specific columns break down the daily cases for each variant: <em>Original</em>, <em>Alpha</em>, <em>Delta</em>, and <em>Omicron</em>.</p>
 <p>The dataset begins in early 2020, during the first wave of the pandemic, and continues through the various waves caused by the emergence of new strains. These variants, like Alpha, Delta, and Omicron, had different levels of contagiousness and impacts on public health, which is reflected in their infection and death rates. For instance, the Alpha variant, emerging in late 2020, was more easily spread than the original strain, while Delta, which appeared in 2021, caused a major global surge. Omicron, emerging toward the end of 2021, was highly transmissible but led to fewer severe cases compared to previous strains.</p>
@@ -254,25 +254,27 @@ window.Quarto = {
 <pre><code># A tibble: 50 × 6
    state       total_cases total_original total_alpha total_delta total_omicron
    &lt;chr&gt;             &lt;int&gt;          &lt;int&gt;       &lt;int&gt;       &lt;int&gt;         &lt;int&gt;
- 1 Alabama          109397          65917       24990       13700          4790
- 2 Alaska           109555          65858       25137       13936          4624
- 3 Arizona          109015          65954       24743       13659          4659
- 4 Arkansas         109357          65836       25024       13824          4673
- 5 California       109889          66914       24645       13675          4655
- 6 Colorado         109613          66687       24592       13475          4859
- 7 Connecticut      109699          66808       24536       13636          4719
- 8 Delaware         109775          66313       24905       13865          4692
- 9 Florida          109083          65877       24844       13646          4716
-10 Georgia          109360          65936       25003       13681          4740
+ 1 Alabama          109451          66120       24767       13838          4726
+ 2 Alaska           108678          65607       24655       13701          4715
+ 3 Arizona          109525          66673       24773       13435          4644
+ 4 Arkansas         109412          65829       25097       13573          4913
+ 5 California       108751          65943       24413       13597          4798
+ 6 Colorado         109959          66780       25116       13505          4558
+ 7 Connecticut      109409          67072       24238       13290          4809
+ 8 Delaware         109506          65564       25088       13920          4934
+ 9 Florida          109928          66189       25083       13980          4676
+10 Georgia          109356          65287       25072       14020          4977
 # ℹ 40 more rows</code></pre>
 </div>
 </div>
-<div class="cell">
+<div class="column-screen">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><embed src="covid_strains_by_state.pdf" class="img-fluid" style="width:200.0%"></p>
+<p><embed src="covid_strains_by_state.pdf" class="quarto-figure quarto-figure-center" style="width:100.0%" height="1500"></p>
 </figure>
+</div>
 </div>
 </div>
 </div>

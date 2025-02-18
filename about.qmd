@@ -15,4 +15,6 @@ about:
       href: https://github.com/justicekessie
 ---
 
-About this blog
+Originally from **Ghana**, I moved to Moscow, ID in Spring 2024 to study [**Bioinformatics and Computational Biology**](https://www.uidaho.edu/sci/bcb) in the [**University of Idaho**](https://www.uidaho.edu/). My first and second degrees were in Mathematics and Applied Mathematics respectively, all in the [University of Energy and Natural Resources, Sunyani, Ghana](https://www.uenr.edu.gh/), where I also taught as an [Assistant Lecturer](https://uenr.edu.gh/staff/mr-kessie-justice-amenyo/) in the Department of Mathematics and Statistics.
+
+This blog
