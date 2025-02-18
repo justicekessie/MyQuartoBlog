@@ -12,7 +12,7 @@ website:
         href: https://x.com/jakes_officio
 format:
   html:
-    theme: cosmo
+    theme: blood
     css: styles.css
 
 editor: visual

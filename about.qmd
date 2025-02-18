@@ -15,6 +15,6 @@ about:
       href: https://github.com/justicekessie
 ---
 
-Originally from **Ghana**, I moved to Moscow, ID in Spring 2024 to study [**Bioinformatics and Computational Biology**](https://www.uidaho.edu/sci/bcb) in the [**University of Idaho**](https://www.uidaho.edu/). My first and second degrees were in Mathematics and Applied Mathematics respectively, all in the [University of Energy and Natural Resources, Sunyani, Ghana](https://www.uenr.edu.gh/), where I also taught as an [Assistant Lecturer](https://uenr.edu.gh/staff/mr-kessie-justice-amenyo/) in the Department of Mathematics and Statistics.
+Originally from **Ghana**, I moved to Moscow, ID in Spring 2024 to study [**Bioinformatics and Computational Biology**](https://www.uidaho.edu/sci/bcb) in the [**University of Idaho**](https://www.uidaho.edu/). My first and second degrees were in Mathematics and Applied Mathematics respectively, all in the [University of Energy and Natural Resources, Sunyani, Ghana](https://www.uenr.edu.gh/).
 
-This blog
+This blog gives updates on the presence of the various strains of COVID-19 in the US population. The data isn't real, and is generated using a periodic function and is just created for the purposes of the course: **BCB 520: Foundations of Data Visualization**.
